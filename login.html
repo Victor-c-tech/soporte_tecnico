@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso — MiHome</title>
+    <link rel="stylesheet" href="login-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="login-container">
+        <a href="index.html" class="logo">MiHome 🏛</a>
+
+        <div class="form-toggle">
+            <button id="show-login-btn" class="toggle-btn active">Iniciar Sesión</button>
+            <button id="show-register-btn" class="toggle-btn">Registrarse</button>
+        </div>
+
+        <!-- Formulario de Inicio de Sesión -->
+        <form id="login-form" class="form-content active-form">
+            <div class="input-group">
+                <label for="login-email">📧 Correo Electrónico</label>
+                <input type="email" id="login-email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="login-password">🔑 Contraseña</label>
+                <input type="password" id="login-password" name="password" required>
+            </div>
+            <button type="submit" class="submit-btn">Entrar 📲</button>
+        </form>
+
+        <!-- Formulario de Registro -->
+        <form id="register-form" class="form-content">
+            <div class="input-group">
+                <label for="register-name">📝 Nombre Completo</label>
+                <input type="text" id="register-name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="register-email">📧 Correo Electrónico</label>
+                <input type="email" id="register-email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="register-password">🔐 Crea una Contraseña</label>
+                <input type="password" id="register-password" name="password" required>
+            </div>
+            <button type="submit" class="submit-btn">Crear Cuenta 🛠</button>
+        </form>
+    </div>
+
+    <script src="login-script.js"></script>
+</body>
+</html>

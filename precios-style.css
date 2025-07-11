@@ -1,0 +1,129 @@
+/* --- ESTILOS PARA LA PÁGINA DE PRECIOS --- */
+
+/* Reutilizamos las variables y estilos globales */
+:root {
+    --bg-color: #0D0D0D;
+    --text-color: #F5F5F5;
+    --text-secondary: #A0A0A0;
+    --accent-green: #00F078;
+    --border-color: #2a2a2a;
+    --card-bg: #1a1a1a;
+    --font-main: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: var(--bg-color); color: var(--text-color); font-family: var(--font-main); }
+
+/* Reutilizamos los estilos de la cabecera para consistencia */
+.main-header { padding: 20px 5%; border-bottom: 1px solid var(--border-color); }
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 900; }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 600; transition: color 0.3s ease, text-shadow 0.3s ease; }
+.nav-links a:hover { color: var(--accent-green); text-shadow: 0 0 8px var(--accent-green); }
+.nav-actions { display: flex; align-items: center; gap: 20px; }
+.login-btn { text-decoration: none; color: var(--text-secondary); font-weight: 600; transition: color 0.3s ease; }
+.login-btn:hover { color: var(--text-color); }
+
+/* Estilos de botones (adaptados para esta página) */
+.cta-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Empuja el botón al fondo de la tarjeta */
+    transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-btn.primary {
+    background-color: var(--accent-green);
+    color: var(--bg-color);
+    border: none;
+    filter: drop-shadow(0 0 8px var(--accent-green));
+}
+.cta-btn.primary:hover { transform: translateY(-2px) scale(1.03); filter: drop-shadow(0 0 15px var(--accent-green)); }
+
+.cta-btn.secondary {
+    background-color: transparent;
+    color: var(--accent-green);
+    border: 2px solid var(--accent-green);
+}
+.cta-btn.secondary:hover { background-color: var(--accent-green); color: var(--bg-color); transform: translateY(-2px); }
+
+
+/* Estilos específicos de la sección de precios */
+.pricing-section { padding: 80px 5%; }
+.pricing-header { text-align: center; margin-bottom: 60px; }
+.pricing-header h1 { font-size: 3rem; margin-bottom: 10px; }
+.pricing-header p { font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Hace que todas las tarjetas tengan la misma altura */
+    gap: 30px;
+    flex-wrap: wrap; /* Para que se vea bien en pantallas pequeñas */
+}
+
+.pricing-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Para el badge */
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-green);
+    box-shadow: 0 15px 40px rgba(0, 240, 120, 0.1);
+}
+
+/* Tarjeta recomendada */
+.pricing-card.recommended {
+    border-color: var(--accent-green);
+    transform: scale(1.05); /* La hace más grande por defecto */
+    box-shadow: 0 0 40px rgba(0, 240, 120, 0.2);
+}
+.pricing-card.recommended:hover {
+    transform: scale(1.08) translateY(-10px); /* Efecto de hover más pronunciado */
+}
+
+.recommended-badge {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background-color: var(--accent-green);
+    color: var(--bg-color);
+    padding: 5px 30px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transform: rotate(45deg);
+}
+
+.pricing-card h3 { font-size: 1.8rem; margin-bottom: 15px; }
+.price { font-size: 2.8rem; font-weight: 900; margin-bottom: 10px; }
+.price span { font-size: 1rem; font-weight: 600; color: var(--text-secondary); margin-left: 5px; }
+.card-description { color: var(--text-secondary); margin-bottom: 30px; min-height: 40px; }
+
+.features { list-style: none; margin-bottom: 30px; }
+.features li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.features li::before {
+    content: '✓';
+    color: var(--accent-green);
+    margin-right: 10px;
+    font-weight: bold;
+}

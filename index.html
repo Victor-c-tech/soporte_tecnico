@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor-Tech</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">SOPORTE 🛠</div>
+            <ul class="nav-links">
+                <li><a href="https://victor-m-victor-manuel-alejo-rosarios-projects.vercel.app/#perfil" target="_blank" rel="noopener noreferrer">Plataforma</a></li>
+                <li><a href="https://youtube.com/@victor-tech-r2d?si=MOzJubvIqjb18ggs" target="_blank" rel="noopener noreferrer">Soluciones</a></li>
+                <li><a href="https://transfer.it/t/HF7TMswDDZYB" target="_blank" rel="noopener noreferrer">Recursos</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61551567411307" target="_blank" rel="noopener noreferrer">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Iniciar sesión</a>
+                <a href="login.html?action=register" class="cta-btn primary">Empezar — es gratis</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <!-- Columna Izquierda: Contenido de Texto -->
+            <div class="hero-content">
+                <h1>Soporte-Tecnico<br>Rapido y Seguro.</h1>
+                <p>
+                    Disfrute de un mantenimiento a tus equipos de manera confiable, escalable, rápido y seguro
+                    para su negocio y empresa — administrado por usted.
+                </p>
+                <a href="login.html?action=register" class="cta-btn primary">Empezar — es gratis</a>
+            </div>
+
+            <!-- Columna Derecha: Todos los Elementos Visuales -->
+            <div class="hero-visual-column">
+                
+                <!-- Círculos pequeños de estado -->
+                <div class="small-circles-wrapper">
+                    <div class="small-stat-circle">
+                        <svg width="120" height="120" viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="55" class="bg-circle" />
+                            <circle cx="60" cy="60" r="55" class="progress-circle temp-circle" />
+                        </svg>
+                        <div class="small-stat-text">
+                            <div id="temp-value" class="small-stat-number">28°C</div>
+                            <div class="small-stat-label">Temperatura</div>
+                        </div>
+                    </div>
+                    <div class="small-stat-circle">
+                        <svg width="120" height="120" viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="55" class="bg-circle" />
+                            <circle cx="60" cy="60" r="55" class="progress-circle time-circle" />
+                        </svg>
+                        <div class="small-stat-text">
+                            <div id="time-value" class="small-stat-number">00:00</div>
+                            <div class="small-stat-label">Hora Local</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Círculo grande principal -->
+                <div class="hero-visual">
+                    <div class="stat-circle">
+                        <svg width="250" height="250" viewBox="0 0 250 250">
+                            <circle cx="125" cy="125" r="115" class="bg-circle" />
+                            <circle cx="125" cy="125" r="115" class="progress-circle" />
+                        </svg>
+                        <div class="stat-text">
+                            <div class="stat-number" id="stat-number">0</div>
+                            <div class="stat-label">ms VICTOR-TECH</div>
+                            <div class="stat-tag">OPTIMAL</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones de archivo redondos -->
+                <div class="file-actions">
+                    <label for="file-upload" class="file-btn">Subir</label>
+                    <input type="file" id="file-upload" hidden>
+                    <a href="assets/texto.txt" download="mi_archivo_de_prueba.txt" class="file-btn">Descargar</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

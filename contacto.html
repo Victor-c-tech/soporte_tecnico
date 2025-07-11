@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Selección — Victor-Tech</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="contacto-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="form-container">
+        <a href="index.html" class="logo">Soporte</a>
+        
+        <!-- Este título cambiará dinámicamente -->
+        <h2 id="plan-title">Estás a un paso de obtener tu Plan</h2>
+        
+        <p>
+            Ingresa tu correo electrónico para que podamos contactarte y activar tu plan de soporte.
+        </p>
+
+        <!-- El Formulario que se conecta con Formspree -->
+        <form id="contact-form" action="https://formspree.io/f/xdkzqddo" method="POST">
+            
+            <!-- Campo de Email (Visible) -->
+            <div class="input-group">
+                <label for="email">Tu Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Campo del Plan (Oculto) -->
+            <input type="hidden" id="plan-input" name="Plan Seleccionado">
+
+            <button type="submit" class="submit-btn">Confirmar y Enviar</button>
+        </form>
+    </div>
+
+    <!-- Script para obtener el plan de la URL -->
+    <script src="contacto-script.js"></script>
+
+</body>
+</html>

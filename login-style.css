@@ -1,0 +1,134 @@
+/* Definición de variables de color y fuentes (igual que el principal) */
+:root {
+    --bg-color: #0D0D0D;
+    --text-color: #F5F5F5;
+    --text-secondary: #A0A0A0;
+    --accent-green: #00F078;
+    --accent-blue: #365EFF;
+    --border-color: #2a2a2a;
+    --card-bg: #1a1a1a;
+    --font-main: 'Inter', sans-serif;
+}
+
+/* Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--text-color);
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+/* Selector para cambiar entre formularios */
+.form-toggle {
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 12px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: var(--accent-blue);
+    color: white;
+    box-shadow: 0 0 15px rgba(54, 94, 255, 0.5);
+}
+
+/* Estilo de los formularios */
+.form-content {
+    display: none; /* Ocultos por defecto */
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-content.active-form {
+    display: flex; /* Se muestra el activo */
+}
+
+.input-group {
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto brillante al hacer focus en el input */
+.input-group input:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(54, 94, 255, 0.3);
+}
+
+.submit-btn {
+    background-color: var(--accent-green);
+    color: var(--bg-color);
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 240, 120, 0.4);
+}

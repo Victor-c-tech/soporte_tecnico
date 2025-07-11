@@ -1,0 +1,117 @@
+/* Definición de variables de color y fuentes */
+:root {
+    --bg-color: #0D0D0D;
+    --text-color: #F5F5F5;
+    --text-secondary: #A0A0A0;
+    --accent-green: #00F078;
+    --accent-blue: #365EFF;
+    --border-color: #2a2a2a;
+    --font-main: 'Inter', sans-serif;
+}
+
+/* Estilos Globales */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: var(--bg-color); color: var(--text-color); font-family: var(--font-main); overflow-x: hidden; }
+
+/* Barra de Navegación */
+.main-header { padding: 20px 5%; border-bottom: 1px solid var(--border-color); }
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 900; }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 600; transition: color 0.3s ease, text-shadow 0.3s ease; }
+.nav-links a:hover { color: var(--accent-green); text-shadow: 0 0 8px var(--accent-green); }
+.nav-actions { display: flex; align-items: center; gap: 20px; }
+.login-btn { text-decoration: none; color: var(--text-secondary); font-weight: 600; transition: color 0.3s ease; }
+.login-btn:hover { color: var(--text-color); }
+
+/* Botones "Empezar" Verdes y Brillantes */
+.cta-btn.primary {
+    background-color: var(--accent-green);
+    color: var(--bg-color);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    border: none;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 0 8px var(--accent-green));
+}
+.cta-btn.primary:hover { transform: translateY(-2px) scale(1.03); filter: drop-shadow(0 0 15px var(--accent-green)); }
+
+/* Sección Principal */
+.hero-section { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 5%; min-height: 85vh; }
+.hero-content { max-width: 500px; flex-shrink: 0; }
+.hero-content h1 { font-size: 4.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+.hero-content p { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 30px; }
+
+/* Columna de Elementos Visuales */
+.hero-visual-column { display: flex; flex-direction: column; align-items: center; gap: 30px; }
+.hero-visual { position: relative; display: flex; justify-content: center; align-items: center; }
+
+/* --- CORRECCIÓN FINAL PARA EL CÍRCULO GRANDE --- */
+.stat-circle {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Las 2 líneas mágicas que faltaban */
+    border-radius: 50%;
+    overflow: hidden;
+}
+.stat-circle svg, .small-stat-circle svg { transform: rotate(-90deg); }
+.bg-circle { fill: none; stroke: var(--border-color); stroke-width: 10; }
+.progress-circle {
+    fill: none; stroke: var(--accent-green); stroke-width: 10; stroke-linecap: round;
+    stroke-dasharray: 722; stroke-dashoffset: 722;
+    transition: stroke-dashoffset 2s cubic-bezier(0.65, 0, 0.35, 1);
+    filter: drop-shadow(0 0 10px var(--accent-green)) drop-shadow(0 0 20px rgba(0, 240, 120, 0.5));
+}
+body.loaded .progress-circle { stroke-dashoffset: 145; }
+.stat-text { position: absolute; text-align: center; }
+.stat-number { font-size: 4.5rem; font-weight: 900; }
+.stat-label { font-size: 1rem; color: var(--text-secondary); }
+.stat-tag {
+    margin-top: 15px; background-color: rgba(0, 240, 120, 0.1); color: var(--accent-green);
+    padding: 5px 12px; border-radius: 20px; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.5px;
+}
+
+/* Círculos pequeños (ya estaban corregidos) */
+.small-circles-wrapper { display: flex; gap: 20px; }
+.small-stat-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.progress-circle.temp-circle {
+    stroke: #FFA500;
+    filter: drop-shadow(0 0 8px #FFA500) drop-shadow(0 0 15px rgba(255, 165, 0, 0.5));
+    stroke-dashoffset: 204;
+}
+.progress-circle.time-circle {
+    stroke: #00BFFF;
+    filter: drop-shadow(0 0 8px #00BFFF) drop-shadow(0 0 15px rgba(0, 191, 255, 0.5));
+    stroke-dasharray: 345;
+    stroke-dashoffset: 345;
+    transition: stroke-dashoffset 1s linear;
+}
+.small-stat-text { position: absolute; text-align: center; }
+.small-stat-number { font-size: 1.8rem; font-weight: 700; }
+.small-stat-label { font-size: 0.75rem; color: var(--text-secondary); font-weight: 600; }
+
+/* Botones redondos de archivo */
+.file-actions { display: flex; gap: 20px; margin-top: -15px; }
+.file-btn {
+    width: 90px; height: 90px; border-radius: 50%; background: transparent; border: 2px solid var(--accent-green);
+    color: var(--accent-green); font-weight: 700; font-size: 0.9rem; text-decoration: none;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s ease; filter: drop-shadow(0 0 6px var(--accent-green));
+}
+.file-btn:hover { background-color: var(--accent-green); color: var(--bg-color); transform: scale(1.05); filter: drop-shadow(0 0 12px var(--accent-green)); }

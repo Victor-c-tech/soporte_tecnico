@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios — Victor-Tech</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="precios-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Reutilizamos la misma cabecera para consistencia -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">Victor-Tech</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Plataforma</a></li> <!-- Enlace a la página principal -->
+                <li><a href="#">Soluciones</a></li>
+                <li><a href="#">Recursos</a></li>
+                <li><a href="precios.html">Precios</a></li> <!-- Enlace a esta misma página -->
+                <li><a href="https://www.facebook.com/profile.php?id=61551567411307" target="_blank" rel="noopener noreferrer">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Iniciar sesión</a>
+                <a href="login.html?action=register" class="cta-btn primary">Empezar — es gratis</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pricing-section">
+            <div class="pricing-header">
+                <h1>Nuestros Planes de Soporte Técnico</h1>
+                <p>Planes transparentes y sin sorpresas, diseñados para tus necesidades.</p>
+            </div>
+
+            <div class="pricing-container">
+
+                <!-- Plan Básico -->
+                <div class="pricing-card">
+                    <h3>Plan Básico</h3>
+                    <div class="price">RD$ 1,500<span>/mes</span></div>
+                    <p class="card-description">Ideal para usuarios domésticos y profesionales independientes.</p>
+                    <ul class="features">
+                        <li>Soporte remoto ilimitado</li>
+                        <li>Optimización y limpieza de sistema</li>
+                        <li>Revisión de Antivirus</li>
+                        <li>Soporte para 1 equipo</li>
+                    </ul>
+                    <a href="contacto.html?plan=Plan Básico" class="cta-btn secondary">Seleccionar Plan</a>
+
+                </div>
+
+                <!-- Plan Profesional (Recomendado) -->
+                <div class="pricing-card recommended">
+                    <div class="recommended-badge">RECOMENDADO</div>
+                    <h3>Plan Profesional</h3>
+                    <div class="price">RD$ 3,500<span>/mes</span></div>
+                    <p class="card-description">Perfecto para pequeñas empresas y usuarios exigentes.</p>
+                    <ul class="features">
+                        <li><strong>Todo lo del Plan Básico, más:</strong></li>
+                        <li>Soporte en sitio (1 visita/mes)</li>
+                        <li>Atención prioritaria</li>
+                        <li>Mantenimiento preventivo de hardware</li>
+                        <li>Soporte para hasta 5 equipos</li>
+                    </ul>
+                    <a href="contacto.html?plan=Plan Profesional" class="cta-btn primary">Seleccionar Plan</a>
+
+                </div>
+
+                <!-- Plan Empresarial -->
+                <div class="pricing-card">
+                    <h3>Plan Empresarial</h3>
+                    <div class="price">Contáctanos</div>
+                    <p class="card-description">Solución a la medida para empresas con necesidades críticas.</p>
+                    <ul class="features">
+                        <li><strong>Todo lo del Plan Profesional, más:</strong></li>
+                        <li>Soporte en sitio ilimitado</li>
+                        <li>Técnico dedicado</li>
+                        <li>Administración de red y servidores</li>
+                        <li>Planes personalizados</li>
+                    </ul>
+                    <a href="contacto.html?plan=Plan Empresarial" class="cta-btn secondary">Solicitar Cotización</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
