@@ -15,7 +15,7 @@
 body { background-color: var(--bg-color); color: var(--text-color); font-family: var(--font-main); }
 
 /* Reutilizamos los estilos de la cabecera para consistencia */
-.main-header { padding: 20px 5%; border-bottom: 1px solid var(--border-color); }
+.main-header { padding: 20px 5%; border-bottom: 1px solid var(--border-color); position: relative; }
 .navbar { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 1.5rem; font-weight: 900; }
 .nav-links { display: flex; list-style: none; gap: 30px; }
@@ -65,7 +65,7 @@ body { background-color: var(--bg-color); color: var(--text-color); font-family:
     justify-content: center;
     align-items: stretch; /* Hace que todas las tarjetas tengan la misma altura */
     gap: 30px;
-    flex-wrap: wrap; /* Para que se vea bien en pantallas pequeñas */
+    flex-wrap: wrap; /* Permite que las tarjetas se reorganicen */
 }
 
 .pricing-card {
@@ -126,4 +126,130 @@ body { background-color: var(--bg-color); color: var(--text-color); font-family:
     color: var(--accent-green);
     margin-right: 10px;
     font-weight: bold;
+}
+
+
+/* --- CÓDIGO RESPONSIVE AÑADIDO --- */
+
+/* --- Estilos para Menú de Hamburguesa y Menú Móvil --- */
+.hamburger-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-menu {
+    display: none;
+    position: absolute;
+    top: 79px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 30px 5%;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    z-index: 1000;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.mobile-nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+.mobile-nav-links a:hover {
+    color: var(--accent-green);
+}
+
+.mobile-nav-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 250px;
+}
+.mobile-nav-actions .login-btn {
+    font-size: 1.1rem;
+}
+.mobile-nav-actions .cta-btn {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* --- Media Queries para Responsividad --- */
+
+/* Para Tablets y pantallas medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+    .pricing-container {
+        flex-direction: column; /* Apila las tarjetas */
+        align-items: center; /* Centra las tarjetas en la columna */
+        gap: 40px; /* Aumenta el espacio vertical entre tarjetas */
+    }
+
+    .pricing-card.recommended {
+        transform: scale(1); /* Resetea el escalado para que no se vea raro */
+    }
+
+    .pricing-card.recommended:hover {
+        transform: translateY(-10px); /* Mantiene el efecto de hover */
+    }
+}
+
+/* Para Móviles (hasta 768px) */
+@media (max-width: 768px) {
+    /* Ocultar menú de escritorio y mostrar el de hamburguesa */
+    .nav-links, .nav-actions {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .mobile-nav-menu.open {
+        display: flex;
+    }
+
+    /* Estilo de la 'X' del menú */
+    .hamburger-menu.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger-menu.open span:nth-child(2) { opacity: 0; }
+    .hamburger-menu.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    
+    /* Ajustes específicos de la página de precios */
+    .pricing-section {
+        padding: 60px 5%;
+    }
+    .pricing-header h1 {
+        font-size: 2.2rem; /* Reduce el tamaño del título principal */
+    }
+    .pricing-header p {
+        font-size: 1rem;
+    }
+    .price {
+        font-size: 2.2rem; /* Reduce el tamaño del precio */
+    }
 }
