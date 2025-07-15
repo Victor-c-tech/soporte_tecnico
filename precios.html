@@ -12,22 +12,48 @@
 </head>
 <body>
 
-    <!-- Reutilizamos la misma cabecera para consistencia -->
+    <!-- Cabecera responsive (actualizada) -->
     <header class="main-header">
         <nav class="navbar">
-            <div class="logo">Victor-Tech</div>
+            <div class="logo">SOPORTE 🛠</div>
+            
+            <!-- Menú para Escritorio (se oculta en móvil) -->
             <ul class="nav-links">
-                <li><a href="index.html">Plataforma</a></li> <!-- Enlace a la página principal -->
-                <li><a href="#">Soluciones</a></li>
-                <li><a href="#">Recursos</a></li>
-                <li><a href="precios.html">Precios</a></li> <!-- Enlace a esta misma página -->
+                <li><a href="index.html">Plataforma</a></li>
+                <li><a href="https://youtube.com/@victor-tech-r2d?si=MOzJubvIqjb18ggs" target="_blank" rel="noopener noreferrer">Soluciones</a></li>
+                <li><a href="https://transfer.it/t/HF7TMswDDZYB" target="_blank" rel="noopener noreferrer">Recursos</a></li>
+                <li><a href="precios.html">Precios</a></li>
                 <li><a href="https://www.facebook.com/profile.php?id=61551567411307" target="_blank" rel="noopener noreferrer">Contacto</a></li>
             </ul>
+            
+            <!-- Acciones para Escritorio (se ocultan en móvil) -->
             <div class="nav-actions">
                 <a href="login.html" class="login-btn">Iniciar sesión</a>
                 <a href="login.html?action=register" class="cta-btn primary">Empezar — es gratis</a>
             </div>
+
+            <!-- Botón de Hamburguesa (solo visible en móvil) -->
+            <button class="hamburger-menu" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+        
+        <!-- Menú para Móvil (oculto por defecto) -->
+        <div class="mobile-nav-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Plataforma</a></li>
+                <li><a href="https://youtube.com/@victor-tech-r2d?si=MOzJubvIqjb18ggs" target="_blank" rel="noopener noreferrer">Soluciones</a></li>
+                <li><a href="https://transfer.it/t/HF7TMswDDZYB" target="_blank" rel="noopener noreferrer">Recursos</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61551567411307" target="_blank" rel="noopener noreferrer">Contacto</a></li>
+            </ul>
+            <div class="mobile-nav-actions">
+                <a href="login.html" class="login-btn">Iniciar sesión</a>
+                <a href="login.html?action=register" class="cta-btn primary">Empezar — es gratis</a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -51,7 +77,6 @@
                         <li>Soporte para 1 equipo</li>
                     </ul>
                     <a href="contacto.html?plan=Plan Básico" class="cta-btn secondary">Seleccionar Plan</a>
-
                 </div>
 
                 <!-- Plan Profesional (Recomendado) -->
@@ -68,7 +93,6 @@
                         <li>Soporte para hasta 5 equipos</li>
                     </ul>
                     <a href="contacto.html?plan=Plan Profesional" class="cta-btn primary">Seleccionar Plan</a>
-
                 </div>
 
                 <!-- Plan Empresarial -->
@@ -90,5 +114,7 @@
         </section>
     </main>
 
+    <!-- Enlace al script para que el menú móvil funcione -->
+    <script src="script.js"></script>
 </body>
 </html>
